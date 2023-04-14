@@ -36,11 +36,6 @@ func main() {
 }
 
 func presentOptions() string {
-	fmt.Println("***********************************************")
-	fmt.Println("*                                             *")
-	fmt.Println("*  Welcome to the temperature converter!      *")
-	fmt.Println("*                                             *")
-	fmt.Println("***********************************************")
 	fmt.Println("Please select an option:")
 	fmt.Println("Type 'convert' to convert create a new file with temperatures in Fahrenheit.")
 	fmt.Println("Type 'average' to calculate the average temperature from the files.")
@@ -79,7 +74,7 @@ func handleConvertOption() error {
 			fmt.Println("Output file generated successfully.")
 		default:
 			// Do not generate output file again
-			fmt.Println("Exiting program.")
+			fmt.Println("Program Excited")
 		}
 	} else {
 		// Output file does not exist, generate it
@@ -130,7 +125,7 @@ func calculateAverageTemperature(filepath, unit string) (float64, error) {
 	file, err := os.Open(filepath)
 	if err != nil {
 		fmt.Println("File does not exist. You must first convert the file from celsius to fahrenheit.")
-		fmt.Println("Exiting program.")
+		fmt.Println("Program Excited.")
 		return 0, err
 	}
 	defer file.Close()
@@ -230,7 +225,7 @@ func generateOutputFile() error {
 			}
 		} else {
 			// Write test string for the last line
-			_, err = writer.WriteString("Data er basert på gyldig data (per 18.03.2023) (CC BY 4.0) fra Meteorologisk institutt (MET);endringen er gjort av Kjell Lindberg")
+			_, err = writer.WriteString("Data er basert på gyldig data (per 18.03.2023) (CC BY 4.0) fra Meteorologisk institutt (MET);endringen er gjort av Joakim Normann")
 			if err != nil {
 				return err
 			}
