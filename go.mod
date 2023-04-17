@@ -1,4 +1,4 @@
-module github.com/Befalen/minyr
+module github.com/befalen/minyr
 
 go 1.20
 
